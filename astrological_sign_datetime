@@ -1,0 +1,45 @@
+"""
+This app tells the user her/his astrological sign based on the user input.
+It uses Python's datetime module.
+"""
+# Code to import the datetime module:
+import datetime
+
+# Code which asks for user input as dd/mm:
+# 1904 has been set as a default year instead of 1900 to include a leap day.
+date_entry = input("What is your birthday? (enter date as dd/mm): ")+"/1904"
+# Code which sets the date format:
+format_date_entry = '%d/%m/%Y'
+# Code which parses the users input from string to date format:
+date_entry = datetime.datetime.strptime(date_entry, format_date_entry)
+
+print("======================================")
+# Code which compares the parsed user input against a date range:
+if datetime.datetime.strptime("21/03/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("19/04/1904", format_date_entry):
+    print("Your astrological sign is Aries")
+elif datetime.datetime.strptime("20/04/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("20/05/1904", format_date_entry):
+    print("Your astrological sign is Taurus")
+elif datetime.datetime.strptime("21/05/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("20/06/1904", format_date_entry):
+    print("Your astrological sign is Gemini")
+elif datetime.datetime.strptime("21/06/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("22/07/1904", format_date_entry):
+    print("Your astrological sign is Cancer")
+elif datetime.datetime.strptime("23/08/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("22/09/1904", format_date_entry):
+    print("Your astrological sign is Virgo")
+elif datetime.datetime.strptime("23/07/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("22/08/1904", format_date_entry):
+    print("Your astrological sign is Leo")
+elif datetime.datetime.strptime("23/08/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("22/09/1904", format_date_entry):
+    print("Your astrological sign is Virgo")
+elif datetime.datetime.strptime("23/09/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("22/10/1904", format_date_entry):
+    print("Your astrological sign is Libra")
+elif datetime.datetime.strptime("23/10/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("21/11/1904", format_date_entry):
+    print("Your astrological sign is Scorpio")
+elif datetime.datetime.strptime("22/11/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("21/12/1904", format_date_entry):
+    print("Your astrological sign is Sagittarius")
+elif datetime.datetime.strptime("22/12/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("19/01/1904", format_date_entry):
+    print("Your astrological sign is Capricorn")
+elif datetime.datetime.strptime("20/01/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("18/02/1904", format_date_entry):
+    print("Your astrological sign is Aquarius")
+elif datetime.datetime.strptime("19/02/1904", format_date_entry) <= date_entry <= datetime.datetime.strptime("20/03/1904", format_date_entry):
+    print("Your astrological sign is Pisces")
+
+print("======================================")
